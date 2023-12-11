@@ -1,4 +1,4 @@
-#include "simple_shell"
+#include "simple_shell.h"
 
 /**
  * actmode - is a function that workes in interactive mode
