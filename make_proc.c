@@ -14,7 +14,7 @@ int make_proc(char **arg)
 	id = fork();
 	if (id == -1)
 	{
-		perror("error on make_proc.c in the forking process")
+		perror("error on make_proc.c in the forking process");
 	}
 
 	if (id == 0)
@@ -31,5 +31,5 @@ int make_proc(char **arg)
 			waitpid(id, &report, WUNTRACED);
 		} while (!WIFEXITED(report) && !WIFSIGNALED(report));
 	}
-	return (1);
+	return (-1);
 }

@@ -9,22 +9,27 @@
 
 int arg_exe(char **arg)
 {
-	char *exist_func[] = {"cd", "env", "exit", "help"};
+	char *myfuncarr[] = {"cd", "env", "exit", "help"};
 
-	int (*my_func[])(char **) = {&own_cd, &own_env, &own_exit, &own_help};
+	int (*myfunc[])(char **) = {&mycd, &myenv, &myexit, &myhelp};
 
-	int i = 0;
+	unsigned int i = 0;
 
 	if (arg[0] == NULL)
 	{
 		return (-1);
 	}
-	for (; i < sizeof(exist_func) / sizeof(char *); i++)
+	for (; i < sizeof(myfuncarr) / sizeof(char *); i++)
 	{
-		if (strcmp(arg[0], exist_func[i]) == 0)
+		if (strcmp(arg[0], myfuncarr[i]) == 0)
 		{
-			return ((my_func[i])(arg));
+			return ((myfunc[i])(arg));
 		}
+
+	}
+	if (strcmp(arg[0], "exit") == 0)
+	{
+		return (0);
 	}
 	return (make_proc(arg));
 }

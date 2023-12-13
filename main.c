@@ -12,7 +12,7 @@ int main(void)
 	}
 	else
 	{
-		non_actmode();
+		 non_actmode();
 	}
 	return (0);
 }

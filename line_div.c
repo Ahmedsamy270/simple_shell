@@ -18,14 +18,15 @@ char **line_div(char *line)
 		fprintf(stderr, "error in line_div in allocat memory\n");
 		exit(EXIT_FAILURE);
 	}
-	ptr = strtok(line, TOKEN_DELIM);
-	for (i = 0; ptr != NULL; i++)
+	ptr = strtok(line, TOK_DELIM);
+	while (ptr != NULL)
 	{
 		if (ptr[0] == '#')
 		{
 			break;
 		}
 		arrptr[i] = ptr;
+		i++;
 		if (i >= buffer)
 		{
 			buffer += buffer;
