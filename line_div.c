@@ -25,6 +25,12 @@ char **line_div(char *line)
 		{
 			break;
 		}
+		if (strcmp(ptr, ";") == 0)
+		{
+			arrptr[i] = NULL;
+			arrptr[i + 1]= strtok(NULL, TOK_DELIM);
+			break;
+		}
 		arrptr[i] = ptr;
 		i++;
 		if (i >= buffer)

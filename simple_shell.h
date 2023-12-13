@@ -8,7 +8,7 @@
 #include <sys/types.h>
 #include <fcntl.h>
 
-#define TOK_DELIM " \t\r\n\a\\;\""
+#define TOK_DELIM " \t\r\n\a\";&|"
 extern char **environ;
 
 void actmode(void);
