@@ -19,7 +19,7 @@ int mycd(char **arg)
 			perror("Error");
 		}
 	}
-	return (1);
+	return (-1);
 }
 
 /**
@@ -37,7 +37,7 @@ int myhelp(char **arg)
 	printf("2.env: to display the enviroment variable\n");
 	printf("3.help: to display the help message\n");
 	printf("4.exit: to exit simple shell\n");
-	return (1);
+	return (-1);
 }
 
 /**
@@ -55,7 +55,7 @@ int myenv(char **arg)
 		printf("%s\n", environ[i]);
 		i++;
 	}
-	return (1);
+	return (-1);
 }
 
 /**

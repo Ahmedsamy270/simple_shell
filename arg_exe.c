@@ -21,15 +21,14 @@ int arg_exe(char **arg)
 	}
 	for (; i < sizeof(myfuncarr) / sizeof(char *); i++)
 	{
+		if (strcmp(arg[0], "exit") == 0)
+		{
+			return (0);
+		}
 		if (strcmp(arg[0], myfuncarr[i]) == 0)
 		{
 			return ((myfunc[i])(arg));
 		}
-
-	}
-	if (strcmp(arg[0], "exit") == 0)
-	{
-		return (0);
 	}
 	return (make_proc(arg));
 }
