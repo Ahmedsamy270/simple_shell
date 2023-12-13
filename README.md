@@ -1,1 +1,1 @@
-this dirictory connten all the progict files
+this dirictory connten all the project files
