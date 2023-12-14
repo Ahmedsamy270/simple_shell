@@ -45,5 +45,4 @@ char *str_reading(void)
 			}
 		}
 	}
-
 }

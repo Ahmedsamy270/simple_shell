@@ -23,7 +23,7 @@ int arg_exe(char **arg)
 	{
 		if (strcmp(arg[0], "exit") == 0)
 		{
-			exit(0);
+			return (0);
 		}
 		if (strcmp(arg[0], myfuncarr[i]) == 0)
 		{
